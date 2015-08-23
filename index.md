@@ -6,7 +6,7 @@ job         : Developing Data Products
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [quiz, bootstrap]
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
@@ -22,7 +22,7 @@ To make a prediction, you input:
 
 MPG Predictor will then plug those values into a prediction model built around the mtcars dataset.
 
---- .class #id
+---
 
 ## How it works
 
@@ -35,7 +35,7 @@ Using the caret library, we've trained a simple glm machine learning model on we
 modFit <- train(mpg ~ wt + cyl + am,method="glm",data=mtcars)
 ```
 
---- 
+---
 
 ## How it works
 
@@ -63,7 +63,7 @@ predict(modFit, newdata=values)
 ```
 
 
---- 
+--- &radio
 
 ## Try it out!
 
@@ -72,3 +72,14 @@ You can give MPG Predictor a try at:
 http://outofrhyme.shinyapps.io/MPG-Predictor
 
 MPG Predictor is a fun and easy way to guess what MPG a car might have if you know a few stats, and hey, maybe it will save you a bit of money in gas. Of course, unless you are purchasing a 1973-74 model of car, the results should be taken with a grain of salt ;)
+
+So will you give it a try?
+
+1. _Of course!_
+2. I have to grade it, what choice do I have?
+
+*** .hint
+Really? There are only two choices...
+
+*** .explanation
+That's the spirit!
